@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "qualcraft",
+	"version": "${version}",
+	"name": "QualCraft",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"JJrody"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT License",
+	"icon": "assets/qualcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.jjrody.qualcraft.QualCraft"
+		],
+		"client": [
+			"net.jjrody.qualcraft.QualCraftClient"
+		]
+	},
+	"mixins": [
+		"qualcraft.mixins.json",
+		{
+			"config": "qualcraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.18",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
